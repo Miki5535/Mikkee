@@ -6,7 +6,7 @@ using Microsoft.Maui.Controls;
 
 namespace Mikkee.Converters
 {
-    public class SubIdExistsConverter : IValueConverter
+public class SubIdExistsConverter : IValueConverter
 {
     public ObservableCollection<Course> RegistrationsInUser { get; set; } = new();
 
@@ -14,7 +14,18 @@ namespace Mikkee.Converters
     {
         if (value is int subId && RegistrationsInUser != null)
         {
-            return RegistrationsInUser.Any(registration => registration.SubId == subId);
+            // เช็คว่ามี SubId นี้ใน RegistrationsInUser หรือไม่
+            var isRegistered = RegistrationsInUser.Any(registration => registration.SubId == subId);
+            
+            // ถ้าต้องการให้ปุ่ม "ลงทะเบียน" แสดงเมื่อไม่ได้ลงทะเบียน
+            // และ "ถอนวิชา" แสดงเมื่อมีการลงทะเบียน
+            if (parameter != null && bool.TryParse(parameter.ToString(), out bool invert))
+            {
+                // หาก parameter = true (ปุ่มถอนวิชา) ให้กลับค่าการแสดงผล
+                return invert ? isRegistered : !isRegistered;
+            }
+
+            return !isRegistered; // ปุ่มลงทะเบียนแสดงเมื่อไม่ลงทะเบียน
         }
         return false;
     }
@@ -24,4 +35,5 @@ namespace Mikkee.Converters
         throw new NotImplementedException();
     }
 }
+
 }

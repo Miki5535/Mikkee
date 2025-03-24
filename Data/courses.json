@@ -268,7 +268,7 @@
     "instructor": "อ. ทักษิณี สุขจิต",
     "schedule": "จันทร์ 14:00-17:00"
   },{
-    "sub_id": 11,
+    "sub_id": 31,
     "course_code": "1506102",
     "course_name": "กฎหมายอาญา",
     "study_type": "GD",
@@ -277,7 +277,7 @@
     "schedule": "อังคาร 13:00-16:00"
   },
   {
-    "sub_id": 12,
+    "sub_id": 32,
     "course_code": "1506103",
     "course_name": "กฎหมายรัฐธรรมนูญ",
     "study_type": "GD",
@@ -286,7 +286,7 @@
     "schedule": "พุธ 10:00-13:00"
   },
   {
-    "sub_id": 13,
+    "sub_id": 33,
     "course_code": "1506104",
     "course_name": "กฎหมายสัญญา",
     "study_type": "GD",
@@ -295,7 +295,7 @@
     "schedule": "พฤหัสบดี 14:00-17:00"
   },
   {
-    "sub_id": 14,
+    "sub_id": 34,
     "course_code": "1506105",
     "course_name": "กฎหมายแรงงาน",
     "study_type": "GD",
@@ -304,7 +304,7 @@
     "schedule": "ศุกร์ 08:00-11:00"
   },
   {
-    "sub_id": 15,
+    "sub_id": 35,
     "course_code": "1506106",
     "course_name": "กฎหมายภาษีอากร",
     "study_type": "GD",
@@ -313,7 +313,7 @@
     "schedule": "จันทร์ 14:00-17:00"
   },
   {
-    "sub_id": 16,
+    "sub_id": 36,
     "course_code": "1506107",
     "course_name": "กฎหมายทรัพย์สินทางปัญญา",
     "study_type": "GD",
@@ -322,7 +322,7 @@
     "schedule": "อังคาร 09:00-12:00"
   },
   {
-    "sub_id": 17,
+    "sub_id": 37,
     "course_code": "1506108",
     "course_name": "กฎหมายสิ่งแวดล้อม",
     "study_type": "GD",
@@ -331,7 +331,7 @@
     "schedule": "พุธ 13:00-16:00"
   },
   {
-    "sub_id": 18,
+    "sub_id": 38,
     "course_code": "1506109",
     "course_name": "กฎหมายเชิงพาณิชย์ระหว่างประเทศ",
     "study_type": "GD",
@@ -340,7 +340,7 @@
     "schedule": "พฤหัสบดี 09:00-12:00"
   },
   {
-    "sub_id": 19,
+    "sub_id": 39,
     "course_code": "1506110",
     "course_name": "กฎหมายการค้าระหว่างประเทศ",
     "study_type": "GD",
@@ -349,193 +349,13 @@
     "schedule": "ศุกร์ 13:00-16:00"
   },
   {
-    "sub_id": 20,
+    "sub_id": 40,
     "course_code": "1506111",
     "course_name": "กฎหมายบริหารราชการ",
     "study_type": "GD",
     "credit": 3,
     "instructor": "อ. นันทนา สมมิตร",
     "schedule": "จันทร์ 10:00-13:00"
-  },
-  {
-    "sub_id": 21,
-    "course_code": "1506112",
-    "course_name": "กฎหมายเกี่ยวกับธุรกิจออนไลน์",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. อรอุมา เกียรติธาน",
-    "schedule": "อังคาร 13:00-16:00"
-  },
-  {
-    "sub_id": 22,
-    "course_code": "1506113",
-    "course_name": "กฎหมายเกี่ยวกับการเงิน",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ธนวัฒน์ บุญชื่น",
-    "schedule": "พุธ 09:00-12:00"
-  },
-  {
-    "sub_id": 23,
-    "course_code": "1506114",
-    "course_name": "กฎหมายประกันภัย",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. สวัสดิ์ บัวเรือง",
-    "schedule": "พฤหัสบดี 10:00-13:00"
-  },
-  {
-    "sub_id": 24,
-    "course_code": "1506115",
-    "course_name": "กฎหมายวิธีพิจารณาความแพ่ง",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ชาตรี พรมทอง",
-    "schedule": "ศุกร์ 14:00-17:00"
-  },
-  {
-    "sub_id": 25,
-    "course_code": "1506116",
-    "course_name": "กฎหมายวิธีพิจารณาความอาญา",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ภัทรา ภัทรกิจ",
-    "schedule": "จันทร์ 13:00-16:00"
-  },
-  {
-    "sub_id": 26,
-    "course_code": "1506117",
-    "course_name": "กฎหมายแพ่งว่าด้วยหนี้",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. สมพร ลิขิตเจริญ",
-    "schedule": "อังคาร 09:00-12:00"
-  },
-  {
-    "sub_id": 27,
-    "course_code": "1506118",
-    "course_name": "กฎหมายเกี่ยวกับธุรกิจระหว่างประเทศ",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. พิมพ์ชนก ศักดิ์ภูมิ",
-    "schedule": "พุธ 10:00-13:00"
-  },
-  {
-    "sub_id": 28,
-    "course_code": "1506119",
-    "course_name": "กฎหมายการเงินและการธนาคาร",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. กฤติยา บุญประสงค์",
-    "schedule": "พฤหัสบดี 13:00-16:00"
-  },
-  {
-    "sub_id": 29,
-    "course_code": "1506120",
-    "course_name": "กฎหมายการพาณิชย์ระหว่างประเทศ",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. พิชัย วงศ์แสง",
-    "schedule": "ศุกร์ 09:00-12:00"
-  },
-  {
-    "sub_id": 30,
-    "course_code": "1506121",
-    "course_name": "กฎหมายธุรกิจและการค้า",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ทักษิณี สุขจิต",
-    "schedule": "จันทร์ 14:00-17:00"
-  },
-  {
-    "sub_id": 31,
-    "course_code": "2006101",
-    "course_name": "คอมพิวเตอร์เบื้องต้น",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ธีระชัย น้อยกระจ่าง",
-    "schedule": "จันทร์ 09:00-12:00"
-  },
-  {
-    "sub_id": 32,
-    "course_code": "2006102",
-    "course_name": "โปรแกรมมิ่งเบื้องต้น",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. วิลาศา ชลธาร",
-    "schedule": "อังคาร 13:00-16:00"
-  },
-  {
-    "sub_id": 33,
-    "course_code": "2006103",
-    "course_name": "โครงสร้างข้อมูลและอัลกอริธึม",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. สุรเชษฐ์ สุขโภค",
-    "schedule": "พุธ 10:00-13:00"
-  },
-  {
-    "sub_id": 34,
-    "course_code": "2006104",
-    "course_name": "ฐานข้อมูล",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ณัฐวุฒิ สาริน",
-    "schedule": "พฤหัสบดี 14:00-17:00"
-  },
-  {
-    "sub_id": 35,
-    "course_code": "2006105",
-    "course_name": "ระบบเครือข่ายคอมพิวเตอร์",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. จิราภรณ์ ลือชัย",
-    "schedule": "ศุกร์ 08:00-11:00"
-  },
-  {
-    "sub_id": 36,
-    "course_code": "2006106",
-    "course_name": "วิศวกรรมซอฟต์แวร์",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. สุวรรณา ทองมา",
-    "schedule": "จันทร์ 14:00-17:00"
-  },
-  {
-    "sub_id": 37,
-    "course_code": "2006107",
-    "course_name": "การพัฒนาเว็บแอปพลิเคชัน",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. พัชรินทร์ ศรีวิชัย",
-    "schedule": "อังคาร 09:00-12:00"
-  },
-  {
-    "sub_id": 38,
-    "course_code": "2006108",
-    "course_name": "การจัดการระบบข้อมูล",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. อัจฉรา เมืองหมอก",
-    "schedule": "พุธ 13:00-16:00"
-  },
-  {
-    "sub_id": 39,
-    "course_code": "2006109",
-    "course_name": "การประมวลผลภาพและสัญญาณ",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. พิสิษฐ์ ปิติวรชัย",
-    "schedule": "พฤหัสบดี 09:00-12:00"
-  },
-  {
-    "sub_id": 40,
-    "course_code": "2006110",
-    "course_name": "ปัญญาประดิษฐ์",
-    "study_type": "GD",
-    "credit": 3,
-    "instructor": "อ. ทวีศักดิ์ ทองทวี",
-    "schedule": "ศุกร์ 13:00-16:00"
   },
   {
     "sub_id": 41,
@@ -625,6 +445,186 @@
     "study_type": "GD",
     "credit": 3,
     "instructor": "อ. สุรจิตน์ บุญชัย",
+    "schedule": "ศุกร์ 13:00-16:00"
+  },
+  {
+    "sub_id": 51,
+    "course_code": "2006121",
+    "course_name": "ระบบคลาวด์คอมพิวเตอร์",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. สมชาย สมบูรณ์",
+    "schedule": "จันทร์ 14:00-17:00"
+  },
+  {
+    "sub_id": 52,
+    "course_code": "2006122",
+    "course_name": "การวิเคราะห์ข้อมูลขนาดใหญ่",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. วรรณี ศิริมงคล",
+    "schedule": "อังคาร 09:00-12:00"
+  },
+  {
+    "sub_id": 53,
+    "course_code": "2006123",
+    "course_name": "ปัญญาประดิษฐ์ขั้นสูง",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. วิโรจน์ ศักดิ์สิริ",
+    "schedule": "พุธ 13:00-16:00"
+  },
+  {
+    "sub_id": 54,
+    "course_code": "2006124",
+    "course_name": "การจัดการระบบฐานข้อมูล",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. รัตนา วงศ์วาน",
+    "schedule": "พฤหัสบดี 10:00-13:00"
+  },
+  {
+    "sub_id": 55,
+    "course_code": "2006125",
+    "course_name": "การพัฒนาเกมคอมพิวเตอร์",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. พีระพงษ์ ชัยชนะ",
+    "schedule": "ศุกร์ 10:00-13:00"
+  },
+  {
+    "sub_id": 56,
+    "course_code": "2006126",
+    "course_name": "การเขียนโปรแกรมเชิงฟังก์ชัน",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ศิริพร ดิลกคุณา",
+    "schedule": "จันทร์ 09:00-12:00"
+  },
+  {
+    "sub_id": 57,
+    "course_code": "2006127",
+    "course_name": "ระบบสารสนเทศทางภูมิศาสตร์",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. วิชัย เกษมสุข",
+    "schedule": "อังคาร 14:00-17:00"
+  },
+  {
+    "sub_id": 58,
+    "course_code": "2006128",
+    "course_name": "การวิเคราะห์ความเสี่ยงทางเทคโนโลยี",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. นิภาพร บุญศิริ",
+    "schedule": "พุธ 09:00-12:00"
+  },
+  {
+    "sub_id": 59,
+    "course_code": "2006129",
+    "course_name": "การประมวลผลภาษาธรรมชาติ",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ชัยวัฒน์ คงเมือง",
+    "schedule": "พฤหัสบดี 13:00-16:00"
+  },
+  {
+    "sub_id": 60,
+    "course_code": "2006130",
+    "course_name": "การจัดการโครงการเทคโนโลยีสารสนเทศ",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. จิรัฐติกาล ศรีสวัสดิ์",
+    "schedule": "ศุกร์ 14:00-17:00"
+  },
+  {
+    "sub_id": 61,
+    "course_code": "2006131",
+    "course_name": "การพัฒนาบล็อกเชน",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ภูมิพัฒน์ จารุวัฒน์",
+    "schedule": "จันทร์ 13:00-16:00"
+  },
+  {
+    "sub_id": 62,
+    "course_code": "2006132",
+    "course_name": "การเรียนรู้เชิงลึก",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. นันทิชา วรเมธ",
+    "schedule": "อังคาร 10:00-13:00"
+  },
+  {
+    "sub_id": 63,
+    "course_code": "2006133",
+    "course_name": "การวิเคราะห์ข้อมูลทางธุรกิจ",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. วิริยา ศักดิ์ศรี",
+    "schedule": "พุธ 14:00-17:00"
+  },
+  {
+    "sub_id": 64,
+    "course_code": "2006134",
+    "course_name": "การออกแบบระบบอัตโนมัติ",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ศักดิ์ชาย บุญมา",
+    "schedule": "พฤหัสบดี 09:00-12:00"
+  },
+  {
+    "sub_id": 65,
+    "course_code": "2006135",
+    "course_name": "การพัฒนาสมองกลฝังตัว",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ปรีดี ศรีเพ็ชร",
+    "schedule": "ศุกร์ 09:00-12:00"
+  },
+  {
+    "sub_id": 66,
+    "course_code": "2006136",
+    "course_name": "การจัดการความปลอดภัยเครือข่าย",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. วิไล ศิริพงษ์",
+    "schedule": "จันทร์ 10:00-13:00"
+  },
+  {
+    "sub_id": 67,
+    "course_code": "2006137",
+    "course_name": "การวิเคราะห์ข้อมูลสังคม",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. รัตติกาล วงศ์สุวรรณ",
+    "schedule": "อังคาร 13:00-16:00"
+  },
+  {
+    "sub_id": 68,
+    "course_code": "2006138",
+    "course_name": "การพัฒนาหุ่นยนต์อัจฉริยะ",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. สมเกียรติ ชัยวัฒน์",
+    "schedule": "พุธ 10:00-13:00"
+  },
+  {
+    "sub_id": 69,
+    "course_code": "2006139",
+    "course_name": "การประยุกต์เทคโนโลยีควอนตัม",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ศิรินทร์ บุญญานันท์",
+    "schedule": "พฤหัสบดี 14:00-17:00"
+  },
+  {
+    "sub_id": 70,
+    "course_code": "2006140",
+    "course_name": "จริยธรรมในเทคโนโลยีดิจิทัล",
+    "study_type": "GD",
+    "credit": 3,
+    "instructor": "อ. ชลิดา ศิริรัตน์",
     "schedule": "ศุกร์ 13:00-16:00"
   }
 ]

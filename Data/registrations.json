@@ -3,143 +3,271 @@
     "user_uid": "u001",
     "current_semester": [
       {
-        "sub_id": 1,
-        "grade": "ยังเรียนอยู่"
-      },
-      {
-        "sub_id": 2,
-        "grade": "ยังเรียนอยู่"
-      },
-      {
         "sub_id": 3,
-        "grade": "ยังเรียนอยู่"
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       },
       {
-        "sub_id": 4,
-        "grade": "ยังเรียนอยู่"
-      },
-      {
-        "sub_id": 5,
-        "grade": "ยังเรียนอยู่"
-      },
-      {
-        "sub_id": 6,
-        "grade": "ยังเรียนอยู่"
+        "sub_id": 8,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       }
     ],
     "past_semesters": [
       {
-        "term": "ภาคเรียนที่ 1/2566",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2566",
         "courses": [
           {
             "sub_id": 1,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 22,
-            "grade": "B+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B"
           },
           {
             "sub_id": 37,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 49,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           },
           {
             "sub_id": 5,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 6,
-            "grade": "B+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B"
           }
         ]
       },
       {
-        "term": "ภาคเรียนที่ 2/2566",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 2/2566",
         "courses": [
           {
             "sub_id": 7,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 8,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 9,
-            "grade": "B+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B"
           },
           {
             "sub_id": 10,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 11,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 12,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           }
         ]
       },
       {
-        "term": "ภาคเรียนที่ 3/2566",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 3/2566",
         "courses": [
           {
             "sub_id": 13,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "D"
           },
           {
             "sub_id": 14,
-            "grade": "C+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "C\u002B"
           },
           {
             "sub_id": 15,
-            "grade": "B+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B"
           },
           {
             "sub_id": 16,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 17,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           },
           {
             "sub_id": 18,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "C"
           }
         ]
       },
       {
-        "term": "ภาคเรียนที่ 1/2565",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2565",
         "courses": [
           {
             "sub_id": 32,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           },
           {
             "sub_id": 41,
-            "grade": "C+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "C\u002B"
           },
           {
             "sub_id": 45,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           },
           {
             "sub_id": 46,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           },
           {
             "sub_id": 33,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           },
           {
             "sub_id": 29,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           }
         ]
@@ -151,15 +279,21 @@
     "current_semester": [
       {
         "sub_id": 7,
-        "grade": "ยังเรียนอยู่"
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       }
     ],
     "past_semesters": [
       {
-        "term": "ภาคเรียนที่ 2/2565",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 2/2565",
         "courses": [
           {
             "sub_id": 19,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "B"
           }
         ]
@@ -171,24 +305,36 @@
     "current_semester": [
       {
         "sub_id": 8,
-        "grade": "ยังเรียนอยู่"
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       },
       {
         "sub_id": 9,
-        "grade": "ยังเรียนอยู่"
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       }
     ],
     "past_semesters": [
       {
-        "term": "ภาคเรียนที่ 1/2565",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2565",
         "courses": [
           {
             "sub_id": 20,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A"
           },
           {
             "sub_id": 21,
-            "grade": "B+"
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B"
           }
         ]
       }
@@ -199,15 +345,21 @@
     "current_semester": [
       {
         "sub_id": 10,
-        "grade": "ยังเรียนอยู่"
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       }
     ],
     "past_semesters": [
       {
-        "term": "ภาคเรียนที่ 1/2565",
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2565",
         "courses": [
           {
             "sub_id": 22,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
             "grade": "A-"
           }
         ]

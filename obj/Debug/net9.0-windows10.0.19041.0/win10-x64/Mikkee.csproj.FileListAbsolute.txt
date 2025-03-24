@@ -481,3 +481,4 @@ C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win
 C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\pro1.scale-100.jpg
 C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\pro2.scale-100.jpg
 C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\pro3.scale-100.jpg
+C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Mikkee.sourcelink.json

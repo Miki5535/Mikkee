@@ -17,7 +17,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mikkee")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+586de9dbb20fd452824fb575d1305be7f37b1982")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mikkee")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mikkee")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

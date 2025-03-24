@@ -3,59 +3,103 @@
              xmlns:converters="clr-namespace:Mikkee.Converters"
              xmlns:models="clr-namespace:Mikkee.Models"
              x:Class="Mikkee.Pages.RegisterPage"
-             x:DataType="models:Course"
-             >
+             x:DataType="models:Course">
     <ContentPage.Resources>
         <ResourceDictionary>
-            <converters:BooleanToTextConverter x:Key="BooleanToTextConverter" />
-            <converters:BooleanToCommandConverter x:Key="BooleanToCommandConverter" />
-            <converters:SubIdExistsConverter x:Key="SubIdExistsConverter" />
-            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+            <converters:BooleanToTextConverter x:Key="BooleanToTextConverter"/>
+            <converters:BooleanToCommandConverter x:Key="BooleanToCommandConverter"/>
+            <converters:SubIdExistsConverter x:Key="SubIdExistsConverter"/>
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <Grid RowDefinitions="Auto, *" Padding="10">
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
         <!-- Search Bar -->
-        <SearchBar Placeholder="ค้นหารายวิชา..." 
-                   TextChanged="OnSearchTextChanged" 
-                   Grid.Row="0" />
+        <SearchBar Placeholder="ค้นหารายวิชา..."
+                   TextChanged="OnSearchTextChanged"
+                   Grid.Row="0"
+                   Grid.ColumnSpan="3"/>
 
         <!-- List View for Courses -->
-<ListView x:Name="CoursesListView" 
-          ItemsSource="{Binding Courses}" 
-          Grid.Row="1">
-    <ListView.ItemTemplate>
-        <DataTemplate x:DataType="models:Course2">
-            <ViewCell>
-                <HorizontalStackLayout Spacing="10">
-                    <Label Text="{Binding CourseCode}" FontSize="16" />
-                    <Label Text="{Binding CourseName}" FontSize="16" />
-                    <!-- ปุ่มลงทะเบียน -->
-                    <Button Text="ลงทะเบียน"
-                            IsVisible="{Binding SubId, Converter={StaticResource SubIdExistsConverter}}"
-                            BackgroundColor="#6200EA"
-                            TextColor="White"
-                            CornerRadius="10"
-                            HeightRequest="40"
-                            WidthRequest="120"
-                            Clicked ="Addsub"
-                             />
+        <ListView x:Name="CoursesListView"
+                  ItemsSource="{Binding Courses}"
+                  Grid.Row="1"
+                  Grid.ColumnSpan="3">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="models:Course2">
+                    <ViewCell>
+                        <Grid Padding="10">
+                            <!-- Grouping Course Code and Course Name -->
+                            <VerticalStackLayout Spacing="10"
+                                                 Grid.Row="0"
+                                                 Grid.Column="0"
+                                                 Grid.ColumnSpan="2">
+                                <HorizontalStackLayout Spacing="10">
 
-                    <!-- ปุ่มถอนวิชา -->
-                    <Button Text="ถอนวิชา"
-                            IsVisible="{Binding SubId, Converter={StaticResource SubIdExistsConverter}, ConverterParameter=true}"
-                            BackgroundColor="#FF5722"
-                            TextColor="White"
-                            CornerRadius="10"
-                            HeightRequest="40"
-                            WidthRequest="120"
-                            Clicked ="Deletesub"
-                             />
-                </HorizontalStackLayout>
-            </ViewCell>
-        </DataTemplate>
-    </ListView.ItemTemplate>
-</ListView>
+                                    <Label Text="{Binding StudyType}"
+                                           FontSize="16"
+                                           VerticalOptions="Center"/>
+                                    <Label Text="{Binding CourseCode}"
+                                           FontSize="16"
+                                           VerticalOptions="Center"/>
+
+                                </HorizontalStackLayout>
+
+                                <Label Text="{Binding CourseName}"
+                                       FontSize="16"
+                                       VerticalOptions="Center"/>
+                                <Label Text="{Binding Instructor}"
+                                       FontSize="16"
+                                       VerticalOptions="Center"/>
+                                <Label Text="{Binding Schedule}"
+                                       FontSize="16"
+                                       VerticalOptions="Center"/>
+                                
+                            </VerticalStackLayout>
+
+                            <!-- ปุ่มลงทะเบียน -->
+                            <Button Text="ลงทะเบียน"
+                                    IsVisible="{Binding SubId, Converter={StaticResource SubIdExistsConverter}}"
+                                    BackgroundColor="#FF30BC0D"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="40"
+                                    WidthRequest="120"
+                                    Clicked="Addsub"
+                                    CommandParameter="{Binding .}"
+                                    Grid.Row="1"
+                                    Grid.Column="0"
+                                    HorizontalOptions="End"/>
+
+                            <!-- ปุ่มถอนวิชา (Aligned to the right) -->
+                            <Button Text="ถอนวิชา"
+                                    IsVisible="{Binding SubId, Converter={StaticResource SubIdExistsConverter}, ConverterParameter=true}"
+                                    BackgroundColor="#FF5722"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="40"
+                                    WidthRequest="120"
+                                    Clicked="Deletesub"
+                                    Grid.Row="1"
+                                    Grid.Column="2"
+                                    CommandParameter="{Binding .}"
+                                    HorizontalOptions="End"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </ContentPage>
