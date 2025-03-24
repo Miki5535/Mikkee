@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mikkee.Pages.LoginPage"
+             Shell.NavBarIsVisible="False"
+             Title="เข้าสู่ระบบ"
+             BackgroundColor="#F5F5F5">
+
+    <Grid Padding="30" RowSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+
+        <!-- โลโก้ -->
+        <Image Source="logo.png"
+               HeightRequest="100"
+               HorizontalOptions="Center"
+               VerticalOptions="End" 
+               Grid.Row="0"/>
+
+        <!-- ฟอร์มล็อกอิน -->
+        <Border StrokeThickness="2" Stroke="#CCCCCC" BackgroundColor="White"
+                Padding="20"  Grid.Row="1">
+            <VerticalStackLayout Spacing="15">
+                <Label Text="เข้าสู่ระบบ"
+                       FontSize="24"
+                       FontAttributes="Bold"
+                       HorizontalOptions="Center"
+                       TextColor="#333" />
+
+                <Entry x:Name="emailEntry"
+                       Placeholder="Email"
+                       Keyboard="Email"
+                       BackgroundColor="#F8F8F8"
+                       Margin="0,5,0,0" />
+
+                <Entry x:Name="passwordEntry"
+                       Placeholder="Password"
+                       IsPassword="True"
+                       BackgroundColor="#F8F8F8"
+                       Margin="0,5,0,0" />
+
+                <Button Text="เข้าสู่ระบบ"
+                        BackgroundColor="#6200EA"
+                        TextColor="White"
+                        CornerRadius="10"
+                        HeightRequest="50"
+                        FontAttributes="Bold"
+                        Clicked="OnLoginClicked"/>
+
+                <Label Text="ลืมรหัสผ่าน?"
+                       FontSize="14"
+                       TextColor="#6200EA"
+                       HorizontalOptions="Center"
+                       GestureRecognizers="{TapGestureRecognizer}" />
+            </VerticalStackLayout>
+        </Border>
+    </Grid>
+</ContentPage>

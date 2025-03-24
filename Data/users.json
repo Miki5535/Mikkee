@@ -1,0 +1,92 @@
+[
+  {
+    "UID": "u001",
+    "email": "t",
+    "password": "1",
+    "name": "วัชรพงษ์   รัตน์ธรรม",
+    "student_id": "65011212031",
+    "faculty_department": "คณะวิทยาการคอมพิวเตอร์",
+    "pro":"pro1.jpg"
+  },
+  {
+    "UID": "u002",
+    "email": "admin",
+    "password": "123",
+    "name": "แอดมิน เทสๆๆๆ",
+    "student_id": "64067890",
+    "faculty_department": "คณะบริหารธุรกิจ/สาขาการตลาด",
+    "pro":"pro2.jpg"
+  },
+  {
+    "UID": "u003",
+    "email": "pim@example.com",
+    "password": "pim123",
+    "name": "พิมพ์พิศา สมบูรณ์",
+    "student_id": "64098765",
+    "faculty_department": "คณะวิทยาศาสตร์/สาขาเคมี",
+    "pro":"pro3.jpg"
+  },
+  {
+    "UID": "u004",
+    "email": "nuttapong@example.com",
+    "password": "nutty123",
+    "name": "ณัฐพงษ์ ใจดี",
+    "student_id": "64112233",
+    "faculty_department": "คณะเทคโนโลยีสารสนเทศ/สาขาคอมพิวเตอร์",
+    "pro":"pro4.jpg"
+  },
+  {
+    "UID": "u005",
+    "email": "sirintra@example.com",
+    "password": "siri123",
+    "name": "ศิรินทรา งามวงศ์วาน",
+    "student_id": "64223344",
+    "faculty_department": "คณะมนุษยศาสตร์/สาขาวรรณคดีไทย",
+    "pro":"pro1.jpg"
+  },
+  {
+    "UID": "u006",
+    "email": "kittipong@example.com",
+    "password": "kit123",
+    "name": "กิตติพงษ์ เจริญสุข",
+    "student_id": "64334455",
+    "faculty_department": "คณะแพทยศาสตร์/สาขาเวชศาสตร์ครอบครัว",
+    "pro":"pro1.jpg"
+  },
+  {
+    "UID": "u007",
+    "email": "wanida@example.com",
+    "password": "wani123",
+    "name": "วนิดา ลีลาวัฒนา",
+    "student_id": "64445566",
+    "faculty_department": "คณะศึกษาศาสตร์/สาขาจิตวิทยาการศึกษา",
+    "pro":"pro1.jpg"
+  },
+  {
+    "UID": "u008",
+    "email": "anuchit@example.com",
+    "password": "anu123",
+    "name": "อนุชิต สุขเกษม",
+    "student_id": "64556677",
+    "faculty_department": "คณะสัตวแพทยศาสตร์/สาขาสัตวบาล",
+    "pro":"pro1.jpg"
+  },
+  {
+    "UID": "u009",
+    "email": "chompoonut@example.com",
+    "password": "chompoo123",
+    "name": "ชมพูนุท สายทอง",
+    "student_id": "64667788",
+    "faculty_department": "คณะเศรษฐศาสตร์/สาขาเศรษฐศาสตร์การเงิน",
+    "pro":"pro1.jpg"
+  },
+  {
+    "UID": "u010",
+    "email": "tanawat@example.com",
+    "password": "tan123",
+    "name": "ธนวัฒน์ แสงสุวรรณ",
+    "student_id": "64778899",
+    "faculty_department": "คณะนิเทศศาสตร์/สาขาสื่อดิจิทัล",
+    "pro":"pro1.jpg"
+  }
+]

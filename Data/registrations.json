@@ -1,0 +1,217 @@
+[
+  {
+    "user_uid": "u001",
+    "current_semester": [
+      {
+        "sub_id": 1,
+        "grade": "ยังเรียนอยู่"
+      },
+      {
+        "sub_id": 2,
+        "grade": "ยังเรียนอยู่"
+      },
+      {
+        "sub_id": 3,
+        "grade": "ยังเรียนอยู่"
+      },
+      {
+        "sub_id": 4,
+        "grade": "ยังเรียนอยู่"
+      },
+      {
+        "sub_id": 5,
+        "grade": "ยังเรียนอยู่"
+      },
+      {
+        "sub_id": 6,
+        "grade": "ยังเรียนอยู่"
+      }
+    ],
+    "past_semesters": [
+      {
+        "term": "ภาคเรียนที่ 1/2566",
+        "courses": [
+          {
+            "sub_id": 1,
+            "grade": "A"
+          },
+          {
+            "sub_id": 22,
+            "grade": "B+"
+          },
+          {
+            "sub_id": 37,
+            "grade": "A"
+          },
+          {
+            "sub_id": 49,
+            "grade": "B"
+          },
+          {
+            "sub_id": 5,
+            "grade": "A"
+          },
+          {
+            "sub_id": 6,
+            "grade": "B+"
+          }
+        ]
+      },
+      {
+        "term": "ภาคเรียนที่ 2/2566",
+        "courses": [
+          {
+            "sub_id": 7,
+            "grade": "A"
+          },
+          {
+            "sub_id": 8,
+            "grade": "A"
+          },
+          {
+            "sub_id": 9,
+            "grade": "B+"
+          },
+          {
+            "sub_id": 10,
+            "grade": "A"
+          },
+          {
+            "sub_id": 11,
+            "grade": "A"
+          },
+          {
+            "sub_id": 12,
+            "grade": "A"
+          }
+        ]
+      },
+      {
+        "term": "ภาคเรียนที่ 3/2566",
+        "courses": [
+          {
+            "sub_id": 13,
+            "grade": "D"
+          },
+          {
+            "sub_id": 14,
+            "grade": "C+"
+          },
+          {
+            "sub_id": 15,
+            "grade": "B+"
+          },
+          {
+            "sub_id": 16,
+            "grade": "A"
+          },
+          {
+            "sub_id": 17,
+            "grade": "B"
+          },
+          {
+            "sub_id": 18,
+            "grade": "C"
+          }
+        ]
+      },
+      {
+        "term": "ภาคเรียนที่ 1/2565",
+        "courses": [
+          {
+            "sub_id": 32,
+            "grade": "B"
+          },
+          {
+            "sub_id": 41,
+            "grade": "C+"
+          },
+          {
+            "sub_id": 45,
+            "grade": "B"
+          },
+          {
+            "sub_id": 46,
+            "grade": "B"
+          },
+          {
+            "sub_id": 33,
+            "grade": "B"
+          },
+          {
+            "sub_id": 29,
+            "grade": "B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user_uid": "u002",
+    "current_semester": [
+      {
+        "sub_id": 7,
+        "grade": "ยังเรียนอยู่"
+      }
+    ],
+    "past_semesters": [
+      {
+        "term": "ภาคเรียนที่ 2/2565",
+        "courses": [
+          {
+            "sub_id": 19,
+            "grade": "B"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user_uid": "u003",
+    "current_semester": [
+      {
+        "sub_id": 8,
+        "grade": "ยังเรียนอยู่"
+      },
+      {
+        "sub_id": 9,
+        "grade": "ยังเรียนอยู่"
+      }
+    ],
+    "past_semesters": [
+      {
+        "term": "ภาคเรียนที่ 1/2565",
+        "courses": [
+          {
+            "sub_id": 20,
+            "grade": "A"
+          },
+          {
+            "sub_id": 21,
+            "grade": "B+"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user_uid": "u004",
+    "current_semester": [
+      {
+        "sub_id": 10,
+        "grade": "ยังเรียนอยู่"
+      }
+    ],
+    "past_semesters": [
+      {
+        "term": "ภาคเรียนที่ 1/2565",
+        "courses": [
+          {
+            "sub_id": 22,
+            "grade": "A-"
+          }
+        ]
+      }
+    ]
+  }
+]
