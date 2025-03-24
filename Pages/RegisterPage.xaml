@@ -25,11 +25,36 @@
             <ColumnDefinition Width="Auto"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Search Bar -->
-        <SearchBar Placeholder="ค้นหารายวิชา..."
-                   TextChanged="OnSearchTextChanged"
-                   Grid.Row="0"
-                   Grid.ColumnSpan="3"/>
+<HorizontalStackLayout>
+    <!-- Search Bar -->
+    <SearchBar x:Name="SearchBar"
+               Placeholder="ค้นหารายวิชา..."
+               TextChanged="OnSearchTextChanged"
+               Margin="10,10,10,10"
+               WidthRequest="500"/> <!-- Make the SearchBar full width -->
+
+    <!-- Category Filter Picker -->
+    <Picker x:Name="FilterPicker"
+            Title="เลือกหมวดหมู่"
+            Margin="10,10,10,10"
+            SelectedIndexChanged="OnFilterChanged">
+        <Picker.Items>
+            <x:String>ทั้งหมด</x:String>
+            <x:String>ลงทะเบียนแล้ว</x:String>
+            <x:String>ยังไม่ลงทะเบียน</x:String>
+        </Picker.Items>
+    </Picker>
+
+      <Button Text="กลับ"
+                BackgroundColor="#6200EA"
+                TextColor="White"
+                CornerRadius="10"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                Clicked="OnฺBack"/>
+
+</HorizontalStackLayout>
+
 
         <!-- List View for Courses -->
         <ListView x:Name="CoursesListView"

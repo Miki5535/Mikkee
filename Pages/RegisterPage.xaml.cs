@@ -18,36 +18,37 @@ namespace Mikkee.Pages
         private ObservableCollection<Course2> AllCourses { get; set; } = new();
         private ObservableCollection<Course2> FilteredCourses { get; set; } = new();
         private ObservableCollection<Course> RegistrationsInUser { get; set; } = new();
-        private string Uid_from ;
+        private string Uid_from;
 
-       public RegisterPage(string uid)
-{
-    InitializeComponent();
-    BindingContext = this;
-    Uid_from = uid;
+        public RegisterPage(string uid)
+        {
+            InitializeComponent();
+            BindingContext = this;
+            Uid_from = uid;
+            FilterPicker.SelectedIndex = 0;
 
-    RegisterCommand = new AsyncRelayCommand<Course2>(async (course) =>
-    {
-        await UpdateJsonFile(course, true);
-        await LoadRegistrationsAsync(uid); // Reload registrations after update
-    });
+            RegisterCommand = new AsyncRelayCommand<Course2>(async (course) =>
+            {
+                await UpdateJsonFile(course, true);
+                await LoadRegistrationsAsync(uid); // Reload registrations after update
+            });
 
-    UnregisterCommand = new AsyncRelayCommand<Course2>(async (course) =>
-    {
-        await UpdateJsonFile(course, false);
-        await LoadRegistrationsAsync(uid); // Reload registrations after update
-    });
+            UnregisterCommand = new AsyncRelayCommand<Course2>(async (course) =>
+            {
+                await UpdateJsonFile(course, false);
+                await LoadRegistrationsAsync(uid); // Reload registrations after update
+            });
 
-    _ = LoadCoursesAsync();
-    _ = LoadRegistrationsAsync(uid);
-    CoursesListView.ItemsSource = FilteredCourses;
-}
+            _ = LoadCoursesAsync();
+            _ = LoadRegistrationsAsync(uid);
+            CoursesListView.ItemsSource = FilteredCourses;
+        }
 
         private async Task LoadCoursesAsync()
         {
             try
             {
-                string jsonPath = Path.Combine(Environment.CurrentDirectory,  "Data", "courses.json");
+                string jsonPath = Path.Combine(Environment.CurrentDirectory, "Data", "courses.json");
                 if (File.Exists(jsonPath))
                 {
                     string json = await File.ReadAllTextAsync(jsonPath);
@@ -90,95 +91,123 @@ namespace Mikkee.Pages
             }
         }
 
-private async Task LoadRegistrationsAsync(string UserUID)
-{
-    try
-    {
-        // Load user registration data
-        string registrationJson;
+        private async Task LoadRegistrationsAsync(string UserUID)
+        {
+            try
+            {
+                // Load user registration data
+                string registrationJson;
 #if ANDROID || IOS
         using var regStream = await FileSystem.OpenAppPackageFileAsync("registrations.json");
         using var regReader = new StreamReader(regStream);
         registrationJson = await regReader.ReadToEndAsync();
 #else
-        var regFilePath = Path.Combine(Environment.CurrentDirectory,  "Data", "registrations.json");
-        registrationJson = await File.ReadAllTextAsync(regFilePath);
+                var regFilePath = Path.Combine(Environment.CurrentDirectory, "Data", "registrations.json");
+                registrationJson = await File.ReadAllTextAsync(regFilePath);
 #endif
 
-        var registrations = JsonSerializer.Deserialize<List<Registration>>(registrationJson);
+                var registrations = JsonSerializer.Deserialize<List<Registration>>(registrationJson);
 
-        if (registrations == null)
-        {
-            Debug.WriteLine("Failed to deserialize registration data.");
-            await DisplayAlert("ข้อผิดพลาด", "ไม่สามารถโหลดข้อมูลได้", "ตกลง");
-            return;
-        }
-
-        // Find the user's registration data
-        var userRegistration = registrations.FirstOrDefault(r => r.UserUID == UserUID);
-        if (userRegistration == null)
-        {
-            Debug.WriteLine($"No registration data found for UID: {UserUID}");
-
-            // Create empty registration data for the user
-            userRegistration = new Registration
-            {
-                UserUID = UserUID,
-                CurrentSemester = new List<UserCourse>(),
-                PastSemesters = new List<PastSemester>()
-            };
-
-            // Inform the user to register
-            await DisplayAlert("แจ้งเตือน", "ไม่พบข้อมูลการลงทะเบียน กรุณาลงทะเบียนรายวิชา", "ตกลง");
-            return;
-        }
-        else
-        {
-            // Populate RegistrationsInUser with the current semester courses
-            RegistrationsInUser.Clear(); // Clear previous data
-
-            // Merge current semester courses into RegistrationsInUser
-            var currentCourses = (userRegistration.CurrentSemester ?? Enumerable.Empty<UserCourse>())
-                .Select(uc => new Course
+                if (registrations == null)
                 {
-                    SubId = uc.SubId,
-                    Grade = uc.Grade,
-                }).ToList();
+                    Debug.WriteLine("Failed to deserialize registration data.");
+                    await DisplayAlert("ข้อผิดพลาด", "ไม่สามารถโหลดข้อมูลได้", "ตกลง");
+                    return;
+                }
 
-            foreach (var course in currentCourses)
-            {
-                RegistrationsInUser.Add(course); // Add to the ObservableCollection
+                // Find the user's registration data
+                var userRegistration = registrations.FirstOrDefault(r => r.UserUID == UserUID);
+                if (userRegistration == null)
+                {
+                    Debug.WriteLine($"No registration data found for UID: {UserUID}");
+
+                    // Create empty registration data for the user
+                    userRegistration = new Registration
+                    {
+                        UserUID = UserUID,
+                        CurrentSemester = new List<UserCourse>(),
+                        PastSemesters = new List<PastSemester>()
+                    };
+
+                    // Inform the user to register
+                    await DisplayAlert("แจ้งเตือน", "ไม่พบข้อมูลการลงทะเบียน กรุณาลงทะเบียนรายวิชา", "ตกลง");
+                    return;
+                }
+                else
+                {
+                    // Populate RegistrationsInUser with the current semester courses
+                    RegistrationsInUser.Clear(); // Clear previous data
+
+                    // Merge current semester courses into RegistrationsInUser
+                    var currentCourses = (userRegistration.CurrentSemester ?? Enumerable.Empty<UserCourse>())
+                        .Select(uc => new Course
+                        {
+                            SubId = uc.SubId,
+                            Grade = uc.Grade,
+                        }).ToList();
+
+                    foreach (var course in currentCourses)
+                    {
+                        RegistrationsInUser.Add(course); // Add to the ObservableCollection
+                    }
+
+                    // Assign RegistrationsInUser to the converter
+                    var converter = (SubIdExistsConverter)Resources["SubIdExistsConverter"];
+                    converter.RegistrationsInUser = RegistrationsInUser;
+
+                    Debug.WriteLine($"RegistrationsInUser: {RegistrationsInUser.Count} courses loaded.");
+                }
             }
-
-            // Assign RegistrationsInUser to the converter
-            var converter = (SubIdExistsConverter)Resources["SubIdExistsConverter"];
-            converter.RegistrationsInUser = RegistrationsInUser;
-
-            Debug.WriteLine($"RegistrationsInUser: {RegistrationsInUser.Count} courses loaded.");
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Error: {ex.Message}");
+                await DisplayAlert("ข้อผิดพลาด", "ไม่สามารถโหลดข้อมูลได้", "ตกลง");
+            }
         }
-    }
-    catch (Exception ex)
+
+
+
+private void OnFilterChanged(object sender, EventArgs e)
     {
-        Debug.WriteLine($"Error: {ex.Message}");
-        await DisplayAlert("ข้อผิดพลาด", "ไม่สามารถโหลดข้อมูลได้", "ตกลง");
+        ApplyFilters();
     }
-}
 
+    private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+    {
+        ApplyFilters();
+    }
 
-
-private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+    private void ApplyFilters()
 {
-    // รับค่าคำค้นหาจาก SearchBar
-    string searchText = e.NewTextValue?.ToLower() ?? "";
+    // Get search text directly from the SearchBar control
+    var searchText = SearchBar.Text?.ToLower() ?? "";
 
-    // กรองข้อมูลจาก AllCourses ตามคำค้นหา
+    // Get selected filter from the Picker
+    var selectedFilter = FilterPicker.SelectedItem?.ToString() ?? "ทั้งหมด";
+
+    // Apply filters to the courses
     var filtered = AllCourses
-        .Where(c => (c.CourseName?.ToLower().Contains(searchText) ?? false) ||
-                    (c.CourseCode?.ToLower().Contains(searchText) ?? false) ||
-                    (c.Instructor?.ToLower().Contains(searchText) ?? false))
+        .Where(c =>
+            (c.CourseName?.ToLower().Contains(searchText) ?? false) ||
+            (c.CourseCode?.ToLower().Contains(searchText) ?? false) ||
+            (c.Instructor?.ToLower().Contains(searchText) ?? false))
         .ToList();
 
-    // อัปเดต FilteredCourses
+    // Apply category filter
+    if (selectedFilter == "ลงทะเบียนแล้ว")
+    {
+        filtered = filtered
+            .Where(c => RegistrationsInUser.Any(r => r.SubId == c.SubId))
+            .ToList();
+    }
+    else if (selectedFilter == "ยังไม่ลงทะเบียน")
+    {
+        filtered = filtered
+            .Where(c => !RegistrationsInUser.Any(r => r.SubId == c.SubId))
+            .ToList();
+    }
+
+    // Update the FilteredCourses collection
     FilteredCourses.Clear();
     foreach (var course in filtered)
     {
@@ -186,221 +215,241 @@ private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
     }
 }
 
-        
 
-public async Task UpdateJsonFile(Course2? course, bool isRegistering)
-{
-    if (course == null)
-    {
-        Debug.WriteLine("Course is null. Cannot update JSON file.");
-        return;
-    }
 
-    try
-    {
-        string jsonPath = Path.Combine(Environment.CurrentDirectory,  "Data", "registered_courses.json");
-
-        List<Course2> registeredCourses = new List<Course2>();
-
-        if (File.Exists(jsonPath))
+        public async Task UpdateJsonFile(Course2? course, bool isRegistering)
         {
-            string json = await File.ReadAllTextAsync(jsonPath);
-            registeredCourses = JsonSerializer.Deserialize<List<Course2>>(json) ?? new List<Course2>();
-        }
-
-        if (isRegistering)
-        {
-            if (!registeredCourses.Any(c => c.SubId == course.SubId))
+            if (course == null)
             {
-                registeredCourses.Add(course); // Add course if not already registered
-            }
-        }
-        else
-        {
-            registeredCourses.RemoveAll(c => c.SubId == course.SubId); // Remove course
-        }
-
-        string updatedJson = JsonSerializer.Serialize(registeredCourses, new JsonSerializerOptions { WriteIndented = true });
-        await File.WriteAllTextAsync(jsonPath, updatedJson);
-
-        Debug.WriteLine($"Updated registered_courses.json successfully.");
-    }
-    catch (Exception ex)
-    {
-        Debug.WriteLine($"Error updating registered_courses.json: {ex.Message}");
-        await DisplayAlert("Error", $"Failed to update registration: {ex.Message}", "OK");
-    }
-}
-
-
-private async void Addsub(object sender, EventArgs e)
-{
-    Debug.WriteLine("Addsub clicked");
-
-    // ดึงข้อมูลจากปุ่มผ่าน CommandParameter
-    var button = sender as Button; // รับปุ่มที่ถูกคลิก
-    if (button?.CommandParameter is Course2 course)
-    {
-        Debug.WriteLine($"Course Code: {course.CourseCode}, Course Name: {course.CourseName}");
-
-        // โหลดข้อมูล JSON จากไฟล์
-        string jsonPath = Path.Combine(Environment.CurrentDirectory,  "Data", "registrations.json");
-        if (!File.Exists(jsonPath))
-        {
-            Debug.WriteLine("registrations.json does not exist.");
-            await DisplayAlert("Error", "Failed to load registration data.", "OK");
-            return;
-        }
-
-        try
-        {
-            string json = await File.ReadAllTextAsync(jsonPath);
-            var registrations = JsonSerializer.Deserialize<List<Registration>>(json);
-
-            if (registrations == null)
-            {
-                Debug.WriteLine("Failed to deserialize registration data.");
-                await DisplayAlert("Error", "Invalid registration data format.", "OK");
+                Debug.WriteLine("Course is null. Cannot update JSON file.");
                 return;
             }
 
-            // ค้นหาข้อมูลของผู้ใช้ที่มี user_uid เป็น "u002"
-            var userRegistration = registrations.FirstOrDefault(r => r.UserUID == Uid_from);
-            if (userRegistration == null)
+            try
             {
-                Debug.WriteLine("User with UID u002 not found.");
-                await DisplayAlert("Error", "User data not found.", "OK");
-                return;
+                string jsonPath = Path.Combine(Environment.CurrentDirectory, "Data", "registered_courses.json");
+
+                List<Course2> registeredCourses = new List<Course2>();
+
+                if (File.Exists(jsonPath))
+                {
+                    string json = await File.ReadAllTextAsync(jsonPath);
+                    registeredCourses = JsonSerializer.Deserialize<List<Course2>>(json) ?? new List<Course2>();
+                }
+
+                if (isRegistering)
+                {
+                    if (!registeredCourses.Any(c => c.SubId == course.SubId))
+                    {
+                        registeredCourses.Add(course); // Add course if not already registered
+                    }
+                }
+                else
+                {
+                    registeredCourses.RemoveAll(c => c.SubId == course.SubId); // Remove course
+                }
+
+                string updatedJson = JsonSerializer.Serialize(registeredCourses, new JsonSerializerOptions { WriteIndented = true });
+                await File.WriteAllTextAsync(jsonPath, updatedJson);
+
+                Debug.WriteLine($"Updated registered_courses.json successfully.");
             }
-
-            // เพิ่มรายวิชาลงใน current_semester
-            var newCourse = new UserCourse
+            catch (Exception ex)
             {
-                SubId = course.SubId,
-                Grade = "ยังเรียนอยู่"
-            };
-
-            if (userRegistration.CurrentSemester == null)
-            {
-                userRegistration.CurrentSemester = new List<UserCourse>();
+                Debug.WriteLine($"Error updating registered_courses.json: {ex.Message}");
+                await DisplayAlert("Error", $"Failed to update registration: {ex.Message}", "OK");
             }
+        }
 
-            // ตรวจสอบว่ารายวิชาที่จะเพิ่มยังไม่มีใน current_semester
-            if (!userRegistration.CurrentSemester.Any(c => c.SubId == course.SubId))
+
+        private async void Addsub(object sender, EventArgs e)
+        {
+            Debug.WriteLine("Addsub clicked");
+
+            // ดึงข้อมูลจากปุ่มผ่าน CommandParameter
+            var button = sender as Button; // รับปุ่มที่ถูกคลิก
+            if (button?.CommandParameter is Course2 course)
             {
-                userRegistration.CurrentSemester.Add(newCourse);
+                Debug.WriteLine($"Course Code: {course.CourseCode}, Course Name: {course.CourseName}");
+
+                // โหลดข้อมูล JSON จากไฟล์
+                string jsonPath = Path.Combine(Environment.CurrentDirectory, "Data", "registrations.json");
+                if (!File.Exists(jsonPath))
+                {
+                    Debug.WriteLine("registrations.json does not exist.");
+                    await DisplayAlert("Error", "Failed to load registration data.", "OK");
+                    return;
+                }
+
+                try
+                {
+                    string json = await File.ReadAllTextAsync(jsonPath);
+                    var registrations = JsonSerializer.Deserialize<List<Registration>>(json);
+
+                    if (registrations == null)
+                    {
+                        Debug.WriteLine("Failed to deserialize registration data.");
+                        await DisplayAlert("Error", "Invalid registration data format.", "OK");
+                        return;
+                    }
+
+                    // ค้นหาข้อมูลของผู้ใช้ที่มี user_uid เป็น "u002"
+                    var userRegistration = registrations.FirstOrDefault(r => r.UserUID == Uid_from);
+                    if (userRegistration == null)
+                    {
+                        Debug.WriteLine("User with UID u002 not found.");
+                        await DisplayAlert("Error", "User data not found.", "OK");
+                        return;
+                    }
+
+                    // เพิ่มรายวิชาลงใน current_semester
+                    var newCourse = new UserCourse
+                    {
+                        SubId = course.SubId,
+                        Grade = "ยังเรียนอยู่"
+                    };
+
+                    if (userRegistration.CurrentSemester == null)
+                    {
+                        userRegistration.CurrentSemester = new List<UserCourse>();
+                    }
+
+                    // ตรวจสอบว่ารายวิชาที่จะเพิ่มยังไม่มีใน current_semester
+                    if (!userRegistration.CurrentSemester.Any(c => c.SubId == course.SubId))
+                    {
+                        userRegistration.CurrentSemester.Add(newCourse);
+                    }
+                    else
+                    {
+
+                        Debug.WriteLine("Course already exists in current semester.");
+                        await DisplayAlert("แจ้งเตือน", "รายวิชานี้ได้ลงทะเบียนแล้ว", "ตกลง");
+                        return;
+                    }
+
+                    // บันทึกข้อมูลกลับไปยังไฟล์ JSON
+                    string updatedJson = JsonSerializer.Serialize(registrations, new JsonSerializerOptions { WriteIndented = true });
+                    await File.WriteAllTextAsync(jsonPath, updatedJson);
+                    Debug.WriteLine("Updated registrations.json successfully.");
+
+
+
+                    _ = LoadCoursesAsync();
+                     _ = LoadRegistrationsAsync(Uid_from);
+            // CoursesListView.ItemsSource = FilteredCourses;
+                    // แสดงข้อความว่าลงทะเบียนสำเร็จ
+                    await DisplayAlert("สำเร็จ", $"ลงทะเบียนรายวิชา {course.CourseName} เรียบร้อยแล้ว", "ตกลง");
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error updating registrations.json: {ex.Message}");
+                    await DisplayAlert("Error", $"Failed to update registration: {ex.Message}", "OK");
+                }
             }
             else
             {
-                await LoadCoursesAsync();
-                Debug.WriteLine("Course already exists in current semester.");
-                await DisplayAlert("แจ้งเตือน", "รายวิชานี้ได้ลงทะเบียนแล้ว", "ตกลง");
-                return;
+                Debug.WriteLine("Failed to retrieve course data from button.");
+                await DisplayAlert("Error", "Invalid course data.", "OK");
             }
-
-            // บันทึกข้อมูลกลับไปยังไฟล์ JSON
-            string updatedJson = JsonSerializer.Serialize(registrations, new JsonSerializerOptions { WriteIndented = true });
-            await File.WriteAllTextAsync(jsonPath, updatedJson);
-            Debug.WriteLine("Updated registrations.json successfully.");
-
-            // แสดงข้อความว่าลงทะเบียนสำเร็จ
-            await DisplayAlert("สำเร็จ", $"ลงทะเบียนรายวิชา {course.CourseName} เรียบร้อยแล้ว", "ตกลง");
         }
-        catch (Exception ex)
+
+
+
+
+        private async void Deletesub(object sender, EventArgs e)
         {
-            Debug.WriteLine($"Error updating registrations.json: {ex.Message}");
-            await DisplayAlert("Error", $"Failed to update registration: {ex.Message}", "OK");
+            Debug.WriteLine("Deletesub clicked");
+
+            // ดึงข้อมูลจากปุ่มผ่าน CommandParameter
+            var button = sender as Button; // รับปุ่มที่ถูกคลิก
+            if (button?.CommandParameter is Course2 course)
+            {
+                Debug.WriteLine($"Course Code: {course.CourseCode}, Course Name: {course.CourseName}");
+
+                // โหลดข้อมูล JSON จากไฟล์
+                string jsonPath = Path.Combine(Environment.CurrentDirectory, "Data", "registrations.json");
+                if (!File.Exists(jsonPath))
+                {
+                    Debug.WriteLine("registrations.json does not exist.");
+                    await DisplayAlert("Error", "Failed to load registration data.", "OK");
+                    return;
+                }
+
+                try
+                {
+                    string json = await File.ReadAllTextAsync(jsonPath);
+                    var registrations = JsonSerializer.Deserialize<List<Registration>>(json);
+
+                    if (registrations == null)
+                    {
+                        Debug.WriteLine("Failed to deserialize registration data.");
+                        await DisplayAlert("Error", "Invalid registration data format.", "OK");
+                        return;
+                    }
+                    else
+                    {
+                        // ค้นหาข้อมูลของผู้ใช้ที่มี user_uid เป็น "u002"
+                        var userRegistration = registrations.FirstOrDefault(r => r.UserUID == Uid_from);
+                        if (userRegistration == null)
+                        {
+                            Debug.WriteLine("User with UID u002 not found.");
+                            await DisplayAlert("Error", "User data not found.", "OK");
+                            return;
+                        }else{
+                            // ตรวจสอบว่ารายวิชาที่จะลบมีอยู่ใน current_semester
+                            var courseToRemove = userRegistration!.CurrentSemester?.FirstOrDefault(c => c.SubId == course.SubId);
+
+                                if (courseToRemove == null)
+                                {
+                                    Debug.WriteLine("Course not found in current semester.");
+                                    await DisplayAlert("แจ้งเตือน", "ไม่พบรายวิชานี้ในรายการลงทะเบียน", "ตกลง");
+                                    return;
+                                }else{
+                                    // ลบรายวิชาออกจาก current_semester
+                                    userRegistration?.CurrentSemester?.Remove(courseToRemove);
+
+                                    // บันทึกข้อมูลกลับไปยังไฟล์ JSON
+                                    string updatedJson = JsonSerializer.Serialize(registrations, new JsonSerializerOptions { WriteIndented = true });
+                                    await File.WriteAllTextAsync(jsonPath, updatedJson);
+                                    Debug.WriteLine("Updated registrations.json successfully.");
+
+                                    // แสดงข้อความว่าลบสำเร็จ
+                                    _ = LoadCoursesAsync();
+            _ = LoadRegistrationsAsync(Uid_from);
+            CoursesListView.ItemsSource = FilteredCourses;
+                                    await DisplayAlert("สำเร็จ", $"ถอนรายวิชา {course.CourseName} เรียบร้อยแล้ว", "ตกลง");
+                                }
+
+                                
+                        }
+
+
+                    }
+
+
+                }
+                catch (Exception ex)
+                {
+                    Debug.WriteLine($"Error updating registrations.json: {ex.Message}");
+                    await DisplayAlert("Error", $"Failed to update registration: {ex.Message}", "OK");
+                }
+            }
+            else
+            {
+                Debug.WriteLine("Failed to retrieve course data from button.");
+                await DisplayAlert("Error", "Invalid course data.", "OK");
+            }
         }
-    }
-    else
-    {
-        Debug.WriteLine("Failed to retrieve course data from button.");
-        await DisplayAlert("Error", "Invalid course data.", "OK");
-    }
-}
 
 
 
 
-private async void Deletesub(object sender, EventArgs e)
+
+private async void OnฺBack(object sender, EventArgs e)
 {
-    Debug.WriteLine("Deletesub clicked");
-
-    // ดึงข้อมูลจากปุ่มผ่าน CommandParameter
-    var button = sender as Button; // รับปุ่มที่ถูกคลิก
-    if (button?.CommandParameter is Course2 course)
-    {
-        Debug.WriteLine($"Course Code: {course.CourseCode}, Course Name: {course.CourseName}");
-
-        // โหลดข้อมูล JSON จากไฟล์
-        string jsonPath = Path.Combine(Environment.CurrentDirectory, "Data", "registrations.json");
-        if (!File.Exists(jsonPath))
-        {
-            Debug.WriteLine("registrations.json does not exist.");
-            await DisplayAlert("Error", "Failed to load registration data.", "OK");
-            return;
-        }
-
-        try
-        {
-            string json = await File.ReadAllTextAsync(jsonPath);
-            var registrations = JsonSerializer.Deserialize<List<Registration>>(json);
-
-            if (registrations == null)
-            {
-                Debug.WriteLine("Failed to deserialize registration data.");
-                await DisplayAlert("Error", "Invalid registration data format.", "OK");
-                return;
-            }
-
-            // ค้นหาข้อมูลของผู้ใช้ที่มี user_uid เป็น "u002"
-            var userRegistration = registrations.FirstOrDefault(r => r.UserUID == Uid_from);
-            if (userRegistration == null)
-            {
-                Debug.WriteLine("User with UID u002 not found.");
-                await DisplayAlert("Error", "User data not found.", "OK");
-                return;
-            }
-
-            // ตรวจสอบว่ารายวิชาที่จะลบมีอยู่ใน current_semester
-           var courseToRemove = userRegistration?.CurrentSemester?.FirstOrDefault(c => c.SubId == course.SubId);
-
-            if (courseToRemove == null)
-            {
-                Debug.WriteLine("Course not found in current semester.");
-                await DisplayAlert("แจ้งเตือน", "ไม่พบรายวิชานี้ในรายการลงทะเบียน", "ตกลง");
-                return;
-            }
-
-            // ลบรายวิชาออกจาก current_semester
-            userRegistration.CurrentSemester.Remove(courseToRemove);
-
-            // บันทึกข้อมูลกลับไปยังไฟล์ JSON
-            string updatedJson = JsonSerializer.Serialize(registrations, new JsonSerializerOptions { WriteIndented = true });
-            await File.WriteAllTextAsync(jsonPath, updatedJson);
-            Debug.WriteLine("Updated registrations.json successfully.");
-
-            // แสดงข้อความว่าลบสำเร็จ
-            await DisplayAlert("สำเร็จ", $"ถอนรายวิชา {course.CourseName} เรียบร้อยแล้ว", "ตกลง");
-        }
-        catch (Exception ex)
-        {
-            Debug.WriteLine($"Error updating registrations.json: {ex.Message}");
-            await DisplayAlert("Error", $"Failed to update registration: {ex.Message}", "OK");
-        }
-    }
-    else
-    {
-        Debug.WriteLine("Failed to retrieve course data from button.");
-        await DisplayAlert("Error", "Invalid course data.", "OK");
-    }
+    // Pop all pages off the navigation stack and navigate back to the Login Page
+    await Navigation.PopAsync();
 }
-
-
-
-
-
-
 
 
 
