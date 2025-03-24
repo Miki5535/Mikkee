@@ -1,4 +1,4 @@
 git add .
 git status
-git commit -m "อัปเดตไฟล์"
+git commit -m "se and picker"
 git push origin main

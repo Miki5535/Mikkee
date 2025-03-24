@@ -3,7 +3,27 @@
     "user_uid": "u001",
     "current_semester": [
       {
-        "sub_id": 4,
+        "sub_id": 8,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 13,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 40,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 9,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 1,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 6,
         "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
       }
     ],

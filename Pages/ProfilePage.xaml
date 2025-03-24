@@ -54,21 +54,40 @@
                TextColor="#333"/>
 
         <!-- Navigation Buttons -->
-        <Button Text="ลงทะเบียนเรียน"
-                BackgroundColor="#6200EA"
+       <HorizontalStackLayout>
+               <Button Text="ลงทะเบียนเรียน"
+                BackgroundColor="#FF229815"
                 TextColor="White"
                 CornerRadius="10"
                 HeightRequest="50"
+                WidthRequest="200"
                 FontAttributes="Bold"
-                Clicked="OnRegisterClicked"/>
+                Clicked="OnRegisterClicked"
+                Margin="0,0,30,0"
+                />
+       <Button Text="ลดวิชาเรียน"
+                BackgroundColor="#FFE0741C"
+                TextColor="White"
+                WidthRequest="200"
+                CornerRadius="10"
+                HeightRequest="50"
+                FontAttributes="Bold"
+                Clicked="OnRegisterClicked"
+                Margin="0,0,30,0"
+                />
 
-        <Button Text="ข้อมูลการลงทะเบียน"
-                BackgroundColor="#6200EA"
+                 <Button Text="ข้อมูลการลงทะเบียน"
+                BackgroundColor="#FFDA04CC"
                 TextColor="White"
                 CornerRadius="10"
+                WidthRequest="200"
                 HeightRequest="50"
                 FontAttributes="Bold"
                 Clicked="OnRegistrationInfoClicked"/>
+       </HorizontalStackLayout>
+
+
+       
 
         <Button Text="ออกจากระบบ"
                 BackgroundColor="#FF3B30"

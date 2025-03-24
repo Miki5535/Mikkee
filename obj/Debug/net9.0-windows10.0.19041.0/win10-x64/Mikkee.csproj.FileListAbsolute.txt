@@ -482,3 +482,9 @@ C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win
 C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\pro2.scale-100.jpg
 C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\pro3.scale-100.jpg
 C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\Mikkee.sourcelink.json
+C:\Users\65011\Desktop\cross\pro\Mikkee\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\email_icon.scale-100.png
+C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\email_icon.scale-100.png
+C:\Users\65011\Desktop\cross\pro\Mikkee\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\lock_icon.scale-100.png
+C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\lock_icon.scale-100.png
+C:\Users\65011\Desktop\cross\pro\Mikkee\bin\Debug\net9.0-windows10.0.19041.0\win10-x64\eye_icon.scale-100.png
+C:\Users\65011\Desktop\cross\pro\Mikkee\obj\Debug\net9.0-windows10.0.19041.0\win10-x64\resizetizer\r\eye_icon.scale-100.png

@@ -58,7 +58,7 @@
 
         <!-- List View for Courses -->
         <ListView x:Name="CoursesListView"
-                  ItemsSource="{Binding Courses}"
+                  
                   Grid.Row="1"
                   Grid.ColumnSpan="3">
             <ListView.ItemTemplate>

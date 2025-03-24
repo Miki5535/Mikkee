@@ -101,5 +101,23 @@ namespace Mikkee.Pages
                 return new List<User>();
             }
         }
+   
+   
+   private async void OnForgotPasswordTapped(object sender, EventArgs e)
+        {
+            await DisplayAlert("ลืมรหัสผ่าน", "กรุณาติดต่อฝ่ายสนับสนุน", "ตกลง");
+        }
+
+        // Event handler สำหรับปุ่มสร้างบัญชี
+        private async void OnSignUpTapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RegisterUserPage());
+        }
+   
+   
+   
+   
+   
+   
     }
 }

@@ -63,6 +63,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegisterPage.
 build_metadata.AdditionalFiles.TargetPath = Pages\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\RegisterPage.xaml
 
+[C:/Users/65011/Desktop/cross/pro/Mikkee/Pages/RegisterUserPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegisterUserPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegisterUserPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegisterUserPage.xaml
+
 [C:/Users/65011/Desktop/cross/pro/Mikkee/Pages/RegistrationInfoPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegistrationInfoPage.xaml
