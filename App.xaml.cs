@@ -13,6 +13,7 @@ public partial class App : Application
     {
         InitializeComponent();
         RegisterResources();
+        SetScreenWidth();
     }
     catch (Exception ex)
     {
@@ -20,7 +21,15 @@ public partial class App : Application
         Console.WriteLine($"App initialization failed: {ex.Message}");
     }
 }
-
+private void SetScreenWidth()
+    {
+        if (Application.Current?.Windows.FirstOrDefault() is { } window)
+        {
+            // คำนวณขนาดหน้าจอมือถือ (Density ต้องใช้เพื่อปรับให้ถูกต้อง)
+            double screenWidth = DeviceDisplay.MainDisplayInfo.Width / DeviceDisplay.MainDisplayInfo.Density;
+            window.Width = screenWidth; // กำหนดความกว้างของหน้าต่าง
+        }
+    }
 
     protected override Window CreateWindow(IActivationState? activationState)
     {

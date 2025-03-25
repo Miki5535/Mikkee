@@ -6,6 +6,8 @@
              Shell.NavBarIsVisible="False"
              Title="เข้าสู่ระบบ">
 
+             
+
     <!-- Gradient Background -->
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">

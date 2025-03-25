@@ -1,322 +1,5 @@
 [
   {
-    "user_uid": "u001",
-    "current_semester": [
-      {
-        "sub_id": 8,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      },
-      {
-        "sub_id": 13,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      },
-      {
-        "sub_id": 40,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      },
-      {
-        "sub_id": 9,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      },
-      {
-        "sub_id": 1,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      },
-      {
-        "sub_id": 6,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      }
-    ],
-    "past_semesters": [
-      {
-        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2566",
-        "courses": [
-          {
-            "sub_id": 1,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 22,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B\u002B"
-          },
-          {
-            "sub_id": 37,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 49,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          },
-          {
-            "sub_id": 5,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 6,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B\u002B"
-          }
-        ]
-      },
-      {
-        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 2/2566",
-        "courses": [
-          {
-            "sub_id": 7,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 8,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 9,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B\u002B"
-          },
-          {
-            "sub_id": 10,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 11,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 12,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          }
-        ]
-      },
-      {
-        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 3/2566",
-        "courses": [
-          {
-            "sub_id": 13,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "D"
-          },
-          {
-            "sub_id": 14,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "C\u002B"
-          },
-          {
-            "sub_id": 15,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B\u002B"
-          },
-          {
-            "sub_id": 16,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "A"
-          },
-          {
-            "sub_id": 17,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          },
-          {
-            "sub_id": 18,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "C"
-          }
-        ]
-      },
-      {
-        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2565",
-        "courses": [
-          {
-            "sub_id": 32,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          },
-          {
-            "sub_id": 41,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "C\u002B"
-          },
-          {
-            "sub_id": 45,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          },
-          {
-            "sub_id": 46,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          },
-          {
-            "sub_id": 33,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          },
-          {
-            "sub_id": 29,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "user_uid": "u002",
-    "current_semester": [
-      {
-        "sub_id": 7,
-        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
-      }
-    ],
-    "past_semesters": [
-      {
-        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 2/2565",
-        "courses": [
-          {
-            "sub_id": 19,
-            "course_code": null,
-            "course_name": null,
-            "study_type": null,
-            "credit": 0,
-            "instructor": null,
-            "schedule": null,
-            "grade": "B"
-          }
-        ]
-      }
-    ]
-  },
-  {
     "user_uid": "u003",
     "current_semester": [
       {
@@ -340,7 +23,9 @@
             "credit": 0,
             "instructor": null,
             "schedule": null,
-            "grade": "A"
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
           },
           {
             "sub_id": 21,
@@ -350,7 +35,9 @@
             "credit": 0,
             "instructor": null,
             "schedule": null,
-            "grade": "B\u002B"
+            "grade": "B\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
           }
         ]
       }
@@ -376,7 +63,388 @@
             "credit": 0,
             "instructor": null,
             "schedule": null,
-            "grade": "A-"
+            "grade": "A-",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user_uid": "u002",
+    "current_semester": [
+      {
+        "sub_id": 7,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 11,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 14,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 15,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      }
+    ],
+    "past_semesters": [
+      {
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 2/2565",
+        "courses": [
+          {
+            "sub_id": 19,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "user_uid": "u001",
+    "current_semester": [
+      {
+        "sub_id": 16,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 8,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 12,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 15,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 18,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      },
+      {
+        "sub_id": 20,
+        "grade": "\u0E22\u0E31\u0E07\u0E40\u0E23\u0E35\u0E22\u0E19\u0E2D\u0E22\u0E39\u0E48"
+      }
+    ],
+    "past_semesters": [
+      {
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2566",
+        "courses": [
+          {
+            "sub_id": 1,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 22,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 37,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 49,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 5,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 6,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          }
+        ]
+      },
+      {
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 2/2566",
+        "courses": [
+          {
+            "sub_id": 7,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 8,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 9,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 10,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 11,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 12,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          }
+        ]
+      },
+      {
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 3/2566",
+        "courses": [
+          {
+            "sub_id": 13,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "D",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 14,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "C\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 15,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 16,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "A",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 17,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 18,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "C",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          }
+        ]
+      },
+      {
+        "term": "\u0E20\u0E32\u0E04\u0E40\u0E23\u0E35\u0E22\u0E19\u0E17\u0E35\u0E48 1/2565",
+        "courses": [
+          {
+            "sub_id": 32,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 41,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "C\u002B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 45,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 46,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 33,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
+          },
+          {
+            "sub_id": 29,
+            "course_code": null,
+            "course_name": null,
+            "study_type": null,
+            "credit": 0,
+            "instructor": null,
+            "schedule": null,
+            "grade": "B",
+            "DayOfWeek": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38",
+            "TimeRange": "\u0E44\u0E21\u0E48\u0E23\u0E30\u0E1A\u0E38"
           }
         ]
       }

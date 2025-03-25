@@ -41,7 +41,8 @@ private User CurrentUser { get; set; }
     {
         if (CurrentUser != null && !string.IsNullOrEmpty(CurrentUser.UID))
         {
-            await Navigation.PushAsync(new RegisterPage(CurrentUser.UID));
+            // await Navigation.PushAsync(new RegisterPage(CurrentUser.UID));
+            await Navigation.PushAsync(new RegisterSubPage(CurrentUser.UID));
         }
         else
         {
@@ -50,6 +51,19 @@ private User CurrentUser { get; set; }
         }
     }
 
+       private async void OnTimeTableClicked(object sender, EventArgs e)
+    {
+        if (CurrentUser != null && !string.IsNullOrEmpty(CurrentUser.UID))
+        {
+            // await Navigation.PushAsync(new RegisterPage(CurrentUser.UID));
+            await Navigation.PushAsync(new TimetablePage(CurrentUser.UID));
+        }
+        else
+        {
+            // Handle the case where CurrentUser or UID is null
+            await DisplayAlert("Error", "ข้อมูลผู้ใช้ไม่สมบูรณ์", "OK");
+        }
+    }
 
         private async void OnRegistrationInfoClicked(object sender, EventArgs e)
         {

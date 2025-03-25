@@ -6,6 +6,26 @@
              BackgroundColor="#F5F5F5">
        <ScrollView Padding="20">
               <VerticalStackLayout Spacing="20">
+                     <HorizontalStackLayout Spacing="20"
+                                   HorizontalOptions="Center">
+                            <Button Text="กลับไปหน้า Profile"
+                                    BackgroundColor="Black"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="50"
+                                    WidthRequest="160"
+                                    FontAttributes="Bold"
+                                    Clicked="OnBackToProfileClicked"/>
+
+                            <Button Text="ลงทะเบียนเรียน"
+                                    BackgroundColor="#FF229815"
+                                    TextColor="White"
+                                    CornerRadius="10"
+                                    HeightRequest="50"
+                                    WidthRequest="160"
+                                    FontAttributes="Bold"
+                                    Clicked="OnRegisterClicked"/>
+                     </HorizontalStackLayout>
 
                      <!-- Current Semester Information -->
                      <Border Stroke="#CCCCCC"
@@ -268,26 +288,7 @@
                      </Border>
 
                      <!-- Navigation Buttons -->
-                     <HorizontalStackLayout Spacing="20"
-                                   HorizontalOptions="Center">
-                            <Button Text="กลับไปหน้า Profile"
-                                    BackgroundColor="#6200EA"
-                                    TextColor="White"
-                                    CornerRadius="10"
-                                    HeightRequest="50"
-                                    WidthRequest="160"
-                                    FontAttributes="Bold"
-                                    Clicked="OnBackToProfileClicked"/>
-
-                            <Button Text="ลงทะเบียนเรียน"
-                                    BackgroundColor="#6200EA"
-                                    TextColor="White"
-                                    CornerRadius="10"
-                                    HeightRequest="50"
-                                    WidthRequest="160"
-                                    FontAttributes="Bold"
-                                    Clicked="OnRegisterClicked"/>
-                     </HorizontalStackLayout>
+                     
 
               </VerticalStackLayout>
        </ScrollView>

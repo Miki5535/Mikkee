@@ -1,0 +1,169 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:Mikkee.Converters"
+             xmlns:models="clr-namespace:Mikkee.Models"
+             x:Class="Mikkee.Pages.RegisterSubPage"
+             x:DataType="models:Course">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:BooleanToTextConverter x:Key="BooleanToTextConverter"/>
+            <converters:BooleanToCommandConverter x:Key="BooleanToCommandConverter"/>
+            <converters:SubIdExistsConverter x:Key="SubIdExistsConverter"/>
+            <converters:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Padding="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+
+        <HorizontalStackLayout>
+            <!-- Search Bar -->
+            <SearchBar x:Name="SearchBar"
+                       Placeholder="ค้นหารายวิชา..."
+                       TextChanged="OnSearchTextChanged"
+                       Margin="10,10,10,10"
+                       WidthRequest="400"/>
+            <!-- Make the SearchBar full width -->
+
+            <!-- Category Filter Picker -->
+            <Picker x:Name="FilterPicker"
+                    Title="เลือกหมวดหมู่"
+                    Margin="10,10,10,10"
+                    SelectedIndexChanged="OnFilterChanged">
+                <Picker.Items>
+                    <x:String>ทั้งหมด</x:String>
+                    <x:String>ลงทะเบียนแล้ว</x:String>
+                    <x:String>ยังไม่ลงทะเบียน</x:String>
+                </Picker.Items>
+            </Picker>
+
+
+
+
+
+
+            
+
+                    <!-- เพิ่มปุ่ม Bulk Register และ Bulk Unregister -->
+
+
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout
+            Grid.Row="1"
+            >
+            <Button Text="กลับ"
+                    BackgroundColor="Black"
+                    TextColor="White"
+WidthRequest="80"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Clicked="OnฺBack"/>
+                    
+            <Button Text="ลงทะเบียนทั้งหมดที่เลือก"
+        BackgroundColor="#00C853"
+        TextColor="White"
+        CornerRadius="10"
+        HeightRequest="50"
+        FontAttributes="Bold"
+        Clicked="BulkRegister_Clicked"
+        Margin="10,10,10,10"/>
+
+<Button Text="ถอนวิชาทั้งหมดที่เลือก"
+        BackgroundColor="#D50000"
+        TextColor="White"
+        CornerRadius="10"
+        HeightRequest="50"
+        FontAttributes="Bold"
+        Clicked="BulkUnregister_Clicked"
+        Margin="10,10,10,10"/>
+        </HorizontalStackLayout>
+
+
+        <!-- List View for Courses -->
+<ListView x:Name="CoursesListView"
+          Grid.Row="2"
+          Grid.ColumnSpan="3">
+    <ListView.ItemTemplate>
+        <DataTemplate x:DataType="models:Course2">
+            <ViewCell>
+                <Grid Padding="10">
+                    <!-- สร้าง Grid 2 Columns -->
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/> <!-- เนื้อหาหลัก -->
+                        <ColumnDefinition Width="Auto"/> <!-- ปุ่ม -->
+                    </Grid.ColumnDefinitions>
+
+                    <!-- คอลัมน์แรก: เนื้อหา -->
+                    <HorizontalStackLayout Grid.Column="0" Spacing="10">
+                        <CheckBox IsChecked="{Binding IsSelected}"
+                                  VerticalOptions="Center"
+                                  HorizontalOptions="Start"
+                                  Margin="0,0,10,0"/>
+                        
+                        <VerticalStackLayout Spacing="10">
+                            <HorizontalStackLayout Spacing="10">
+                                <Label Text="{Binding StudyType}"
+                                       FontSize="16"
+                                       VerticalOptions="Center"/>
+                                <Label Text="{Binding CourseCode}"
+                                       FontSize="16"
+                                       VerticalOptions="Center"/>
+                            </HorizontalStackLayout>
+
+                            <Label Text="{Binding CourseName}"
+                                   FontSize="16"
+                                   VerticalOptions="Center"/>
+                            <Label Text="{Binding Instructor}"
+                                   FontSize="16"
+                                   VerticalOptions="Center"/>
+                            <Label Text="{Binding Schedule}"
+                                   FontSize="16"
+                                   VerticalOptions="Center"/>
+                        </VerticalStackLayout>
+                    </HorizontalStackLayout>
+
+                    <!-- คอลัมน์ที่สอง: ปุ่ม -->
+                    <HorizontalStackLayout Grid.Column="1" 
+                                           Spacing="10"
+                                           VerticalOptions="Center">
+                        <!-- ปุ่มลงทะเบียน -->
+                        <Button Text="ลงทะเบียน"
+                                IsVisible="{Binding SubId, Converter={StaticResource SubIdExistsConverter}}"
+                                BackgroundColor="#FF30BC0D"
+                                TextColor="White"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="120"
+                                Clicked="Addsub"
+                                CommandParameter="{Binding .}"/>
+
+                        <!-- ปุ่มถอนวิชา -->
+                        <Button Text="ถอนวิชา"
+                                IsVisible="{Binding SubId, Converter={StaticResource SubIdExistsConverter}, ConverterParameter=true}"
+                                BackgroundColor="#FF5722"
+                                TextColor="White"
+                                CornerRadius="10"
+                                HeightRequest="40"
+                                WidthRequest="120"
+                                Clicked="Deletesub"
+                                CommandParameter="{Binding .}"/>
+                    </HorizontalStackLayout>
+                </Grid>
+            </ViewCell>
+        </DataTemplate>
+    </ListView.ItemTemplate>
+</ListView>
+
+    </Grid>
+</ContentPage>

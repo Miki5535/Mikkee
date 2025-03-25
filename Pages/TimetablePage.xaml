@@ -1,0 +1,80 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Mikkee.Models"
+             x:Class="Mikkee.Pages.TimetablePage"
+             Title="ตารางเรียน">
+             
+
+    <ScrollView>
+        
+        <VerticalStackLayout>
+            <Button Text="กลับ"
+                    BackgroundColor="Black"
+                    TextColor="White"
+                    WidthRequest="100"
+                    HeightRequest="50"
+                    FontAttributes="Bold"
+                    Clicked="OnฺBack"
+                    HorizontalOptions="Start"
+                    Margin="10,0,0,0"
+                    />
+
+
+                    <CollectionView ItemsSource="{Binding GroupedCourses}"
+                        IsGrouped="True">
+                        
+            
+            <CollectionView.GroupHeaderTemplate>
+                <DataTemplate>
+                    <Label Text="{Binding Day}"
+                           BackgroundColor="#F5F5F5"
+                           FontSize="18"
+                           FontAttributes="Bold"
+                           Padding="15"/>
+                </DataTemplate>
+            </CollectionView.GroupHeaderTemplate>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Padding="10" RowDefinitions="Auto,Auto,Auto">
+                        <Label Grid.Row="0"
+                               Text="{Binding TimeRange, TargetNullValue='ไม่ระบุเวลา'}"
+                               TextColor="#6200EA"
+                               FontAttributes="Bold"/>
+                               
+                               <HorizontalStackLayout Grid.Row="1">
+                                <Label Grid.Row="1"
+                               Text="{Binding CourseCode, TargetNullValue='ไม่มีรหัสวิชา'} "
+                               LineBreakMode="WordWrap"
+                               Margin="0,0,10,0"
+                               
+                               />
+
+
+
+                                <Label 
+                               Text="{Binding CourseName, TargetNullValue='ไม่มีชื่อวิชา'}"
+                               
+                               FontAttributes="Bold"/>
+                        
+                               </HorizontalStackLayout>
+                               
+                        <Label Grid.Row="2"
+                               Text="{Binding Instructor}"
+                               TextColor="Black"
+                               FontSize="14"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+            <CollectionView.EmptyView>
+                <Label Text="ไม่มีวิชาที่ลงทะเบียน"
+                       TextColor="Gray"
+                       HorizontalOptions="Center"/>
+            </CollectionView.EmptyView>
+
+        </CollectionView>
+        </VerticalStackLayout>
+        
+    </ScrollView>
+</ContentPage>

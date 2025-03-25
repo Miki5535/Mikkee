@@ -65,14 +65,14 @@
                 Clicked="OnRegisterClicked"
                 Margin="0,0,30,0"
                 />
-       <Button Text="ลดวิชาเรียน"
+       <Button Text="ตารางเรียน"
                 BackgroundColor="#FFE0741C"
                 TextColor="White"
                 WidthRequest="200"
                 CornerRadius="10"
                 HeightRequest="50"
                 FontAttributes="Bold"
-                Clicked="OnRegisterClicked"
+                Clicked="OnTimeTableClicked"
                 Margin="0,0,30,0"
                 />
 

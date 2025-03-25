@@ -16,7 +16,7 @@ namespace Mikkee.Pages
             InitializeComponent();
             UserUID = userUID;
             LoadRegistrationData();
-            
+
         }
 
         private async void LoadRegistrationData()
@@ -30,7 +30,7 @@ namespace Mikkee.Pages
         using var courseReader = new StreamReader(courseStream);
         courseDetailsJson = await courseReader.ReadToEndAsync();
 #else
-                var courseFilePath = Path.Combine(Environment.CurrentDirectory,  "Data", "courses.json");
+                var courseFilePath = Path.Combine(Environment.CurrentDirectory, "Data", "courses.json");
                 courseDetailsJson = await File.ReadAllTextAsync(courseFilePath);
 #endif
 
@@ -43,7 +43,7 @@ namespace Mikkee.Pages
         using var regReader = new StreamReader(regStream);
         registrationJson = await regReader.ReadToEndAsync();
 #else
-                var regFilePath = Path.Combine(Environment.CurrentDirectory,  "Data", "registrations.json");
+                var regFilePath = Path.Combine(Environment.CurrentDirectory, "Data", "registrations.json");
                 registrationJson = await File.ReadAllTextAsync(regFilePath);
 #endif
 
@@ -120,9 +120,9 @@ namespace Mikkee.Pages
                   }).ToList()
     }).ToList();
 
-// Debug.WriteLine($"Past Semesters (After Join): {JsonSerializer.Serialize(pastSemesters)}");
+                    // Debug.WriteLine($"Past Semesters (After Join): {JsonSerializer.Serialize(pastSemesters)}");
 
-DisplayPastSemesters(pastSemesters);
+                    DisplayPastSemesters(pastSemesters);
 
 
                 }
@@ -200,83 +200,83 @@ DisplayPastSemesters(pastSemesters);
         }
 
         private void DisplayPastSemesters(List<PastSemester> pastSemesters)
-{
-    pastSemestersGrid.Children.Clear();
-    pastSemestersGrid.RowDefinitions.Clear();
-
-    int rowIndex = 0;
-
-    foreach (var semester in pastSemesters)
-    {
-        // Add Term Label
-        pastSemestersGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-        var termLabel = new Label
         {
-            Text = semester.Term,
-            FontSize = 16,
-            FontAttributes = FontAttributes.Bold,
-            TextColor = Colors.Gray,
-            Margin = new Thickness(0, 10, 0, 5)
-        };
-        Grid.SetRow(termLabel, rowIndex);
-        Grid.SetColumnSpan(termLabel, 5);
-        pastSemestersGrid.Children.Add(termLabel);
-        rowIndex++;
+            pastSemestersGrid.Children.Clear();
+            pastSemestersGrid.RowDefinitions.Clear();
 
-        // Add Header Row
-        pastSemestersGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+            int rowIndex = 0;
 
-        var headers = new[] { "รหัสวิชา", "ชื่อวิชา", "แบบการศึกษา", "หน่วยกิต", "เกรด" };
-        for (int i = 0; i < headers.Length; i++)
-        {
-            var headerLabel = CreateLabel(headers[i], TextAlignment.Center);
-            headerLabel.BackgroundColor = Colors.LightBlue;
-            headerLabel.TextColor = Colors.White;
-            Grid.SetRow(headerLabel, rowIndex);
-            Grid.SetColumn(headerLabel, i);
-            pastSemestersGrid.Children.Add(headerLabel);
+            foreach (var semester in pastSemesters)
+            {
+                // Add Term Label
+                pastSemestersGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+                var termLabel = new Label
+                {
+                    Text = semester.Term,
+                    FontSize = 16,
+                    FontAttributes = FontAttributes.Bold,
+                    TextColor = Colors.Gray,
+                    Margin = new Thickness(0, 10, 0, 5)
+                };
+                Grid.SetRow(termLabel, rowIndex);
+                Grid.SetColumnSpan(termLabel, 5);
+                pastSemestersGrid.Children.Add(termLabel);
+                rowIndex++;
+
+                // Add Header Row
+                pastSemestersGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+
+                var headers = new[] { "รหัสวิชา", "ชื่อวิชา", "แบบการศึกษา", "หน่วยกิต", "เกรด" };
+                for (int i = 0; i < headers.Length; i++)
+                {
+                    var headerLabel = CreateLabel(headers[i], TextAlignment.Center);
+                    headerLabel.BackgroundColor = Colors.LightBlue;
+                    headerLabel.TextColor = Colors.White;
+                    Grid.SetRow(headerLabel, rowIndex);
+                    Grid.SetColumn(headerLabel, i);
+                    pastSemestersGrid.Children.Add(headerLabel);
+                }
+                rowIndex++;
+
+                // Add Course Rows
+                if (semester.Courses == null) continue;
+
+                foreach (var course in semester.Courses)
+                {
+
+                    pastSemestersGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
+
+                    var codeLabel = CreateLabel(course.CourseCode ?? "N/A", TextAlignment.Center);
+                    var nameLabel = CreateLabel(course.CourseName ?? "N/A", TextAlignment.Start);
+                    var studyTypeLabel = CreateLabel(course.StudyType ?? "N/A", TextAlignment.Center);
+                    var creditLabel = CreateLabel(course.Credit.ToString(), TextAlignment.Center);
+                    var gradeLabel = CreateLabel(course.Grade ?? "N/A", TextAlignment.Center);
+
+                    Grid.SetRow(codeLabel, rowIndex);
+                    Grid.SetColumn(codeLabel, 0);
+
+                    Grid.SetRow(nameLabel, rowIndex);
+                    Grid.SetColumn(nameLabel, 1);
+
+                    Grid.SetRow(studyTypeLabel, rowIndex);
+                    Grid.SetColumn(studyTypeLabel, 2);
+
+                    Grid.SetRow(creditLabel, rowIndex);
+                    Grid.SetColumn(creditLabel, 3);
+
+                    Grid.SetRow(gradeLabel, rowIndex);
+                    Grid.SetColumn(gradeLabel, 4);
+
+                    pastSemestersGrid.Children.Add(codeLabel);
+                    pastSemestersGrid.Children.Add(nameLabel);
+                    pastSemestersGrid.Children.Add(studyTypeLabel);
+                    pastSemestersGrid.Children.Add(creditLabel);
+                    pastSemestersGrid.Children.Add(gradeLabel);
+
+                    rowIndex++;
+                }
+            }
         }
-        rowIndex++;
-
-        // Add Course Rows
-        if (semester.Courses == null) continue;
-
-        foreach (var course in semester.Courses)
-        {
-            
-            pastSemestersGrid.RowDefinitions.Add(new RowDefinition { Height = GridLength.Auto });
-
-            var codeLabel = CreateLabel(course.CourseCode ?? "N/A", TextAlignment.Center);
-            var nameLabel = CreateLabel(course.CourseName ?? "N/A", TextAlignment.Start);
-            var studyTypeLabel = CreateLabel(course.StudyType ?? "N/A", TextAlignment.Center);
-            var creditLabel = CreateLabel(course.Credit.ToString(), TextAlignment.Center);
-            var gradeLabel = CreateLabel(course.Grade ?? "N/A", TextAlignment.Center);
-
-            Grid.SetRow(codeLabel, rowIndex);
-            Grid.SetColumn(codeLabel, 0);
-
-            Grid.SetRow(nameLabel, rowIndex);
-            Grid.SetColumn(nameLabel, 1);
-
-            Grid.SetRow(studyTypeLabel, rowIndex);
-            Grid.SetColumn(studyTypeLabel, 2);
-
-            Grid.SetRow(creditLabel, rowIndex);
-            Grid.SetColumn(creditLabel, 3);
-
-            Grid.SetRow(gradeLabel, rowIndex);
-            Grid.SetColumn(gradeLabel, 4);
-
-            pastSemestersGrid.Children.Add(codeLabel);
-            pastSemestersGrid.Children.Add(nameLabel);
-            pastSemestersGrid.Children.Add(studyTypeLabel);
-            pastSemestersGrid.Children.Add(creditLabel);
-            pastSemestersGrid.Children.Add(gradeLabel);
-
-            rowIndex++;
-        }
-    }
-}
 
         private Label CreateLabel(string? text, TextAlignment alignment)
         {
@@ -299,7 +299,7 @@ DisplayPastSemesters(pastSemesters);
 
         private async void OnRegisterClicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new RegisterPage(UserUID));
+            await Navigation.PushAsync(new RegisterSubPage(UserUID));
         }
     }
 }

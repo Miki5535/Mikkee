@@ -63,6 +63,12 @@ build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegisterPage.
 build_metadata.AdditionalFiles.TargetPath = Pages\RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\RegisterPage.xaml
 
+[C:/Users/65011/Desktop/cross/pro/Mikkee/Pages/RegisterSubPage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegisterSubPage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\RegisterSubPage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\RegisterSubPage.xaml
+
 [C:/Users/65011/Desktop/cross/pro/Mikkee/Pages/RegisterUserPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegisterUserPage.xaml
@@ -74,6 +80,12 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.RegistrationInfoPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages\RegistrationInfoPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages\RegistrationInfoPage.xaml
+
+[C:/Users/65011/Desktop/cross/pro/Mikkee/Pages/TimetablePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = Mikkee.Pages.TimetablePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages\TimetablePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages\TimetablePage.xaml
 
 [C:/Users/65011/Desktop/cross/pro/Mikkee/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
